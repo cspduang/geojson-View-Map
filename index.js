@@ -13,7 +13,7 @@ $(function () {
   div.addEventListener("drop", function (event) {
     event.preventDefault();
 
-    // get file 
+    // get file object
     var fileList = [].slice.call(event.dataTransfer.files);
     let file = fileList[0];
     // read file and render json
@@ -31,7 +31,7 @@ $(function () {
   // readfile
 
   function readFiles(file) {
-    console.log('file', file)
+    console.log('v3_file', file)
     if (file.name.includes('.geojson')) {
       // read file
       var reader = new FileReader();
@@ -72,7 +72,7 @@ $(function () {
         // },
         // itemStyle: {
         //   normal: {
-        //     // borderColor: '#c9d8ff',  //map view
+        //     // borderColor: '#c9d8ff',  //map area
         //     borderColor: '#fff',
         //     borderWidth: 0.1,
         //     areaColor: '#8b76d6',
@@ -81,7 +81,7 @@ $(function () {
         //   emphasis: {
         //     shadowColor: 10,
         //     borderColor: 'rgba(201, 216, 255)',
-        //     areaColor: '#324fb1', //chosen map view
+        //     areaColor: '#324fb1', //choose map
         //     borderWidth: 0,
         //   },
         // },
